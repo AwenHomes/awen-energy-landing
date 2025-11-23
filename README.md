@@ -2,6 +2,10 @@
 
 A Next.js landing page to validate market demand for a solar warranty recovery consulting service.
 
+**🌐 Live Site:** [https://awenenergy.com](https://awenenergy.com)
+
+**📊 Status:** ✅ Deployed and Live
+
 ## 🚀 Quick Start
 
 ### 1. Install Dependencies

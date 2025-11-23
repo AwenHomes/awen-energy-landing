@@ -24,14 +24,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Awen Energy" }],
   creator: "Awen Energy",
   publisher: "Awen Energy",
-  metadataBase: new URL("https://awenenergy.com"), // Update with your actual domain
+  metadataBase: new URL("https://awenenergy.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Awen Energy - Solar Warranty Recovery Service",
     description: "Your solar installer went bankrupt? We help homeowners recover manufacturer warranties and get their solar systems fixed. Free assessment, nationwide service.",
-    url: "https://awenenergy.com", // Update with your actual domain
+    url: "https://awenenergy.com",
     siteName: "Awen Energy",
     locale: "en_US",
     type: "website",
