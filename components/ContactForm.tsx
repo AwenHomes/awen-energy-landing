@@ -7,10 +7,10 @@ export default function ContactForm() {
   // 4. Copy the URL from the iframe src attribute
   // 5. Replace the placeholder below with your URL
 
-  const GOOGLE_FORM_URL = "YOUR_GOOGLE_FORM_EMBED_URL_HERE";
+  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSchkgLCqjUoOQN0XKE6Afb0KjbsnF6ZfvSxLxkcm83sSMrtBw/viewform?embedded=true";
 
   // Set to true once you've created your Google Form
-  const hasGoogleForm = false;
+  const hasGoogleForm = true;
 
   return (
     <section id="contact-form" className="section-padding bg-gradient-to-br from-primary-50 to-white">
@@ -34,7 +34,7 @@ export default function ContactForm() {
               <iframe
                 src={GOOGLE_FORM_URL}
                 width="100%"
-                height="1200"
+                height="3400"
                 frameBorder="0"
                 marginHeight={0}
                 marginWidth={0}
