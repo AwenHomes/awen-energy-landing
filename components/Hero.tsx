@@ -1,5 +1,7 @@
 'use client';
 
+import SocialShare from './SocialShare';
+
 export default function Hero() {
   const scrollToForm = () => {
     const formElement = document.getElementById('contact-form');
@@ -53,6 +55,12 @@ export default function Hero() {
           >
             Schedule Your Free Consultation
           </button>
+
+          {/* Social Share */}
+          <div className="mt-8">
+            <p className="text-sm text-gray-500 mb-3">Share this with others facing the same problem:</p>
+            <SocialShare size="md" />
+          </div>
 
           {/* Trust Indicator */}
           <p className="mt-6 text-sm text-gray-500">

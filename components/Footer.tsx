@@ -1,3 +1,5 @@
+import SocialShare from './SocialShare';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -48,6 +50,19 @@ export default function Footer() {
               <li>Contractor Coordination</li>
               <li>Claim Management</li>
             </ul>
+          </div>
+        </div>
+
+        {/* Social Media Links */}
+        <div className="border-t border-gray-700 pt-8 pb-8">
+          <div className="text-center mb-4">
+            <h4 className="text-white font-semibold mb-3">Follow & Share</h4>
+            <p className="text-gray-400 text-sm mb-4">Help others recover their solar systems</p>
+            <div className="flex justify-center">
+              <div className="scale-125">
+                <SocialShare size="md" />
+              </div>
+            </div>
           </div>
         </div>
 
