@@ -1,16 +1,17 @@
 export default function ContactForm() {
-  // Replace GOOGLE_FORM_URL with your actual Google Form embed URL
+  // Google Form URL is now configured via environment variable
+  // Set NEXT_PUBLIC_GOOGLE_FORM_URL in your .env.local file
   // To get the embed URL:
   // 1. Go to your Google Form
   // 2. Click "Send" button
   // 3. Click the "<>" (Embed HTML) icon
   // 4. Copy the URL from the iframe src attribute
-  // 5. Replace the placeholder below with your URL
+  // 5. Add to .env.local: NEXT_PUBLIC_GOOGLE_FORM_URL=your-url-here
 
-  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSchkgLCqjUoOQN0XKE6Afb0KjbsnF6ZfvSxLxkcm83sSMrtBw/viewform?embedded=true";
+  const GOOGLE_FORM_URL = process.env.NEXT_PUBLIC_GOOGLE_FORM_URL || "";
 
-  // Set to true once you've created your Google Form
-  const hasGoogleForm = true;
+  // Check if Google Form URL is configured
+  const hasGoogleForm = !!GOOGLE_FORM_URL;
 
   return (
     <section id="contact-form" className="section-padding bg-gradient-to-br from-primary-50 to-white">

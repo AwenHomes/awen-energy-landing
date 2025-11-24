@@ -52,12 +52,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    // Add your verification codes here
-    google: "your-google-verification-code",
-    // yandex: "your-yandex-verification-code",
-    // bing: "your-bing-verification-code",
-  },
+  // verification: {
+  //   // Add your verification codes when ready
+  //   // google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+  // },
 };
 
 export default function RootLayout({
