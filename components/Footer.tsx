@@ -57,16 +57,16 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-3 text-sm">Important Disclaimers</h4>
             <div className="space-y-2 text-sm text-gray-400">
               <p>
-                <strong>No Guarantee of Approval:</strong> Awen Energy cannot guarantee that manufacturer warranty claims will be approved. We provide navigation and advocacy services to maximize your chances of success, but final approval decisions rest with the equipment manufacturers.
+                <strong>No Guarantee of Approval:</strong> Awen Energy LLC cannot guarantee that manufacturer warranty claims will be approved. We provide navigation and advocacy services to maximize your chances of success, but final approval decisions rest with the equipment manufacturers.
               </p>
               <p>
                 <strong>Service Scope:</strong> We handle manufacturer equipment defects only. We cannot assist with workmanship warranties, installation defects, or warranties that have expired. Our service is for residential solar systems only.
               </p>
               <p>
-                <strong>Contact Authorization:</strong> By submitting an inquiry or contacting Awen Energy, you authorize us to contact you regarding solar warranty recovery services via phone, email, or text message, even if your number is listed on any federal or state Do Not Call registry. You may opt out of communications at any time by emailing info@awenenergy.com.
+                <strong>Contact Authorization:</strong> By submitting an inquiry or contacting Awen Energy LLC, you authorize us to contact you regarding solar warranty recovery services via phone, email, or text message, even if your number is listed on any federal or state Do Not Call registry. You may opt out of communications at any time by emailing info@awenenergy.com.
               </p>
               <p>
-                <strong>Not Legal or Financial Advice:</strong> Information provided by Awen Energy is for informational purposes and does not constitute legal or financial advice. Consult appropriate professionals for legal or financial guidance.
+                <strong>Not Legal or Financial Advice:</strong> Information provided by Awen Energy LLC is for informational purposes and does not constitute legal or financial advice. Consult appropriate professionals for legal or financial guidance.
               </p>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
           <p>
-            &copy; {currentYear} Awen Energy. All rights reserved.
+            &copy; {currentYear} Awen Energy LLC. All rights reserved.
           </p>
           <p className="mt-2">
             Helping homeowners navigate solar warranty recovery nationwide.
