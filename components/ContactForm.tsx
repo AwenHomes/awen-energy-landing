@@ -8,7 +8,7 @@ export default function ContactForm() {
   // 4. Copy the URL from the iframe src attribute
   // 5. Add to .env.local: NEXT_PUBLIC_GOOGLE_FORM_URL=your-url-here
 
-  const GOOGLE_FORM_URL = process.env.NEXT_PUBLIC_GOOGLE_FORM_URL || "";
+  const GOOGLE_FORM_URL = process.env.NEXT_PUBLIC_GOOGLE_FORM_URL || "https://docs.google.com/forms/d/e/1FAIpQLSchkgLCqjUoOQN0XKE6Afb0KjbsnF6ZfvSxLxkcm83sSMrtBw/viewform?embedded=true";
 
   // Check if Google Form URL is configured
   const hasGoogleForm = !!GOOGLE_FORM_URL;
