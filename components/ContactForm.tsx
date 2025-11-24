@@ -20,11 +20,8 @@ export default function ContactForm() {
           <h2 className="heading-lg mb-4">
             Schedule Your Free Assessment
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ready to get your solar system fixed? Fill out the form below and we'll reach out within 24 hours to schedule your free 30-minute consultation.
-          </p>
-          <p className="text-sm text-gray-500">
-            By submitting this form, you authorize Awen Energy to contact you regarding your solar warranty recovery needs, even if you are on a federal or state Do Not Call list.
           </p>
         </div>
 
@@ -57,7 +54,7 @@ export default function ContactForm() {
               </div>
 
               <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                <h3 className="font-semibold text-gray-800 mb-3">Suggested Google Form Questions:</h3>
+                <h3 className="font-semibold text-gray-800 mb-3">Suggested Google Form Questions (TCPA Compliant):</h3>
                 <ol className="space-y-2 text-gray-700 list-decimal list-inside">
                   <li>Name (Full name) - Required</li>
                   <li>Email Address - Required</li>
@@ -69,7 +66,9 @@ export default function ContactForm() {
                   <li>What's not working? (Paragraph: Describe the issue with your solar system)</li>
                   <li>Have you tried to get help? If so, what happened? (Paragraph)</li>
                   <li>Best time to reach you? (Dropdown: Morning, Afternoon, Evening, Anytime)</li>
-                  <li>Consent: "I authorize Awen Energy to contact me regarding my solar warranty recovery needs, including by phone or email, even if I am on a federal or state Do Not Call list." (Checkbox - Required)</li>
+                  <li className="font-semibold text-red-700">CONSENT FOR PHONE CALLS: "I authorize Awen Energy and its representatives to contact me at the telephone number provided above, including by using an automatic telephone dialing system or artificial/prerecorded voice, for marketing and informational purposes related to solar warranty recovery services. I understand that consent is not required as a condition of purchase and that I may revoke this consent at any time. I understand that I may be placed on Awen Energy's internal Do Not Call list by calling info@awenenergy.com or by telling any Awen Energy representative during a call." (Checkbox - Required)</li>
+                  <li className="font-semibold text-red-700">CONSENT FOR TEXT MESSAGES: "I authorize Awen Energy to send me text messages (SMS/MMS) at the mobile number provided above for marketing and informational purposes related to solar warranty recovery services. I understand that consent is not required as a condition of purchase, that message and data rates may apply, and that I can opt out at any time by replying STOP to any text message." (Checkbox - Required)</li>
+                  <li className="font-semibold text-red-700">CONSENT FOR EMAIL: "I authorize Awen Energy to send me emails at the email address provided above for marketing and informational purposes related to solar warranty recovery services. I understand that I can unsubscribe at any time by clicking the unsubscribe link in any email." (Checkbox - Required)</li>
                 </ol>
               </div>
 
