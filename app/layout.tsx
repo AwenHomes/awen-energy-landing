@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     "SolarEdge warranty",
     "solar claim assistance"
   ],
-  authors: [{ name: "Awen Energy" }],
-  creator: "Awen Energy",
-  publisher: "Awen Energy",
+  authors: [{ name: "Awen Energy LLC" }],
+  creator: "Awen Energy LLC",
+  publisher: "Awen Energy LLC",
   metadataBase: new URL("https://awenenergy.com"),
   alternates: {
     canonical: "/",
