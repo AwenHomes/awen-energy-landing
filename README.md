@@ -195,4 +195,4 @@ For questions about this landing page:
 
 ## 📄 License
 
-Private - Awen Energy
+Private - Awen Energy LLC

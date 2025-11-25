@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     "SolarEdge warranty",
     "solar claim assistance"
   ],
-  authors: [{ name: "Awen Energy" }],
-  creator: "Awen Energy",
-  publisher: "Awen Energy",
+  authors: [{ name: "Awen Energy LLC" }],
+  creator: "Awen Energy LLC",
+  publisher: "Awen Energy LLC",
   metadataBase: new URL("https://awenenergy.com"),
   alternates: {
     canonical: "/",
@@ -52,12 +52,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    // Add your verification codes here
-    google: "your-google-verification-code",
-    // yandex: "your-yandex-verification-code",
-    // bing: "your-bing-verification-code",
-  },
+  // verification: {
+  //   // Add your verification codes when ready
+  //   // google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+  // },
 };
 
 export default function RootLayout({

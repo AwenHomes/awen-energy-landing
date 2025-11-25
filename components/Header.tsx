@@ -1,14 +1,9 @@
 'use client';
 
 import Image from 'next/image';
+import { scrollToForm } from '@/lib/utils';
 
 export default function Header() {
-  const scrollToForm = () => {
-    const formElement = document.getElementById('contact-form');
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
