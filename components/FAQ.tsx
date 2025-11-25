@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { scrollToForm } from '@/lib/utils';
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -105,12 +106,7 @@ export default function FAQ() {
           <p className="text-lg text-gray-700">
             Still have questions?{' '}
             <button
-              onClick={() => {
-                const formElement = document.getElementById('contact-form');
-                if (formElement) {
-                  formElement.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
+              onClick={scrollToForm}
               className="text-primary-600 font-semibold hover:text-primary-700 underline"
             >
               Schedule your free assessment call

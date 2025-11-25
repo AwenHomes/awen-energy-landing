@@ -1,3 +1,5 @@
+import { CONTACT, COMPANY } from '@/lib/constants';
+
 export default function ContactForm() {
   // Google Form URL is now configured via environment variable
   // Set NEXT_PUBLIC_GOOGLE_FORM_URL in your .env.local file
@@ -23,6 +25,9 @@ export default function ContactForm() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ready to get your solar system fixed? Fill out the form below and we'll reach out within 24 hours to schedule your free 30-minute consultation.
           </p>
+          <p className="text-sm text-gray-500 mt-2">
+            By submitting this form, you authorize {COMPANY.name} to contact you regarding your solar warranty recovery needs, even if you are on a federal or state Do Not Call list.
+          </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
@@ -32,7 +37,7 @@ export default function ContactForm() {
               <iframe
                 src={GOOGLE_FORM_URL}
                 width="100%"
-                height="3400"
+                height="2000"
                 frameBorder="0"
                 marginHeight={0}
                 marginWidth={0}
@@ -130,10 +135,10 @@ export default function ContactForm() {
             <p className="text-gray-600">
               Prefer to email directly?{' '}
               <a
-                href="mailto:info@awenenergy.com"
+                href={`mailto:${CONTACT.email}`}
                 className="text-primary-600 font-semibold hover:text-primary-700"
               >
-                info@awenenergy.com
+                {CONTACT.email}
               </a>
             </p>
           </div>
