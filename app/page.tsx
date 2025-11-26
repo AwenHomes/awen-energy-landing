@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import Header from '@/components/Header';
+import BlackFridayBanner from '@/components/BlackFridayBanner';
 import Hero from '@/components/Hero';
 import ProblemStatement from '@/components/ProblemStatement';
 import WhoThisIsFor from '@/components/WhoThisIsFor';
@@ -64,6 +65,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <BlackFridayBanner />
       <main className="min-h-screen">
         <Hero />
         <ProblemStatement />
