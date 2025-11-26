@@ -4,7 +4,11 @@ import SocialShare from './SocialShare';
 import { scrollToForm } from '@/lib/utils';
 import { CheckIcon } from '@/components/icons/CheckIcon';
 
+const OFFER_END_DATE = new Date('2025-12-01T23:59:59');
+
 export default function Hero() {
+  const isOfferActive = new Date() < OFFER_END_DATE;
+
   return (
     <section className="relative bg-gradient-to-br from-primary-50 via-white to-primary-50 section-padding pt-16">
       <div className="container-custom">
@@ -37,12 +41,19 @@ export default function Hero() {
             </div>
           </div>
 
+          {/* Black Friday Special Notice */}
+          {isOfferActive && (
+            <div className="mb-6 inline-block bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-8 py-3 rounded-full font-bold text-lg shadow-lg animate-bounce">
+              🎉 Black Friday Special: Get Started FREE (Save $500!)
+            </div>
+          )}
+
           {/* CTA Button */}
           <button
             onClick={scrollToForm}
             className="btn-primary text-lg"
           >
-            Schedule Your Free Consultation
+            {isOfferActive ? 'Claim Your Free Start' : 'Schedule Your Free Consultation'}
           </button>
 
           {/* Social Share */}

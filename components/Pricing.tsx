@@ -1,6 +1,12 @@
+'use client';
+
 import { CheckIcon } from '@/components/icons/CheckIcon';
 
+const OFFER_END_DATE = new Date('2025-12-01T23:59:59');
+
 export default function Pricing() {
+  const isOfferActive = new Date() < OFFER_END_DATE;
+
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
@@ -11,6 +17,11 @@ export default function Pricing() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             No hidden fees. No upfront guarantees required. Pay as we progress through each stage.
           </p>
+          {isOfferActive && (
+            <div className="mt-4 inline-block bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-6 py-2 rounded-full font-bold shadow-lg animate-pulse">
+              🎉 Black Friday Special: Claim Prep Fee Waived!
+            </div>
+          )}
         </div>
 
         {/* Pricing Cards */}
@@ -46,14 +57,29 @@ export default function Pricing() {
           </div>
 
           {/* Claim Prep */}
-          <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-8 rounded-xl border-2 border-primary-400 shadow-lg transform md:scale-105">
+          <div className="bg-gradient-to-br from-primary-50 to-primary-100 p-8 rounded-xl border-2 border-primary-400 shadow-lg transform md:scale-105 relative overflow-hidden">
+            {isOfferActive && (
+              <div className="absolute top-0 right-0 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-4 py-1 rounded-bl-lg font-bold text-sm shadow-lg">
+                BLACK FRIDAY
+              </div>
+            )}
             <div className="text-center mb-6">
               <div className="inline-block bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
                 Stage 2 - Most Popular
               </div>
               <h3 className="heading-md mb-2">Claim Preparation</h3>
-              <div className="text-5xl font-bold text-primary-600 mb-2">$500</div>
-              <p className="text-gray-600">One-time flat fee</p>
+              {isOfferActive ? (
+                <div>
+                  <div className="text-3xl font-bold text-gray-400 line-through mb-1">$500</div>
+                  <div className="text-5xl font-bold text-green-600 mb-2">FREE</div>
+                  <p className="text-green-600 font-semibold">Black Friday Special - Save $500!</p>
+                </div>
+              ) : (
+                <>
+                  <div className="text-5xl font-bold text-primary-600 mb-2">$500</div>
+                  <p className="text-gray-600">One-time flat fee</p>
+                </>
+              )}
             </div>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
@@ -108,9 +134,16 @@ export default function Pricing() {
 
         {/* Pricing Example */}
         <div className="max-w-4xl mx-auto bg-gray-50 p-8 rounded-xl border border-gray-200">
-          <h3 className="heading-sm mb-4 text-center">Real Example: What You'll Pay</h3>
+          <h3 className="heading-sm mb-4 text-center">
+            Real Example: What You'll Pay{isOfferActive && ' (With Black Friday Offer)'}
+          </h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg">
+            <div className="bg-white p-6 rounded-lg relative">
+              {isOfferActive && (
+                <div className="absolute -top-3 -right-3 bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                  SAVE $500
+                </div>
+              )}
               <h4 className="font-semibold text-gray-800 mb-3">Scenario 1: $5,000 Inverter Replacement</h4>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex justify-between">
@@ -119,7 +152,11 @@ export default function Pricing() {
                 </li>
                 <li className="flex justify-between">
                   <span>Claim Prep:</span>
-                  <span className="font-semibold">$500</span>
+                  {isOfferActive ? (
+                    <span className="font-semibold text-green-600">$0 <span className="text-xs line-through text-gray-400">$500</span></span>
+                  ) : (
+                    <span className="font-semibold">$500</span>
+                  )}
                 </li>
                 <li className="flex justify-between">
                   <span>Success Fee (10% of $5,000):</span>
@@ -127,16 +164,21 @@ export default function Pricing() {
                 </li>
                 <li className="flex justify-between pt-2 border-t border-gray-200">
                   <span className="font-bold">Total Cost to You:</span>
-                  <span className="font-bold text-primary-600">$1,000</span>
+                  <span className="font-bold text-primary-600">${isOfferActive ? '500' : '1,000'}</span>
                 </li>
                 <li className="flex justify-between text-green-600">
                   <span className="font-bold">Your Savings:</span>
-                  <span className="font-bold">$4,000</span>
+                  <span className="font-bold">${isOfferActive ? '4,500' : '4,000'}</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-white p-6 rounded-lg">
+            <div className="bg-white p-6 rounded-lg relative">
+              {isOfferActive && (
+                <div className="absolute -top-3 -right-3 bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                  SAVE $500
+                </div>
+              )}
               <h4 className="font-semibold text-gray-800 mb-3">Scenario 2: $15,000 Panel Replacement</h4>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex justify-between">
@@ -145,7 +187,11 @@ export default function Pricing() {
                 </li>
                 <li className="flex justify-between">
                   <span>Claim Prep:</span>
-                  <span className="font-semibold">$500</span>
+                  {isOfferActive ? (
+                    <span className="font-semibold text-green-600">$0 <span className="text-xs line-through text-gray-400">$500</span></span>
+                  ) : (
+                    <span className="font-semibold">$500</span>
+                  )}
                 </li>
                 <li className="flex justify-between">
                   <span>Success Fee (10% of $15,000):</span>
@@ -153,11 +199,11 @@ export default function Pricing() {
                 </li>
                 <li className="flex justify-between pt-2 border-t border-gray-200">
                   <span className="font-bold">Total Cost to You:</span>
-                  <span className="font-bold text-primary-600">$2,000</span>
+                  <span className="font-bold text-primary-600">${isOfferActive ? '1,500' : '2,000'}</span>
                 </li>
                 <li className="flex justify-between text-green-600">
                   <span className="font-bold">Your Savings:</span>
-                  <span className="font-bold">$13,000</span>
+                  <span className="font-bold">${isOfferActive ? '13,500' : '13,000'}</span>
                 </li>
               </ul>
             </div>
