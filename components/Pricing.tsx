@@ -1,11 +1,25 @@
 'use client';
 
 import { CheckIcon } from '@/components/icons/CheckIcon';
+import { scrollToForm } from '@/lib/utils';
+import { useRouter } from 'next/navigation';
 
 const OFFER_END_DATE = new Date('2025-12-01T23:59:59');
 
 export default function Pricing() {
+  const router = useRouter();
   const isOfferActive = new Date() < OFFER_END_DATE;
+
+  const handleGetStarted = () => {
+    if (isOfferActive) {
+      // During Black Friday offer, direct to contact form since it's free
+      scrollToForm();
+    } else {
+      // After offer expires, redirect to checkout to pay $500
+      const priceId = process.env.NEXT_PUBLIC_STRIPE_CLAIM_PREP_PRICE_ID || '';
+      router.push(`/checkout?priceId=${priceId}`);
+    }
+  };
 
   return (
     <section className="section-padding bg-white">
@@ -81,7 +95,7 @@ export default function Pricing() {
                 </>
               )}
             </div>
-            <ul className="space-y-3">
+            <ul className="space-y-3 mb-6">
               <li className="flex items-start gap-2">
                 <CheckIcon className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" />
                 <span className="text-gray-700">Gather all documentation</span>
@@ -99,6 +113,12 @@ export default function Pricing() {
                 <span className="text-gray-700">Submit all warranty claims</span>
               </li>
             </ul>
+            <button
+              onClick={handleGetStarted}
+              className="w-full btn-primary py-3 text-center"
+            >
+              {isOfferActive ? 'Claim This Offer' : 'Get Started - Pay Now'}
+            </button>
           </div>
 
           {/* Success Fee */}
