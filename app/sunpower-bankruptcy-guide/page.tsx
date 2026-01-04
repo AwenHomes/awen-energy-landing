@@ -30,8 +30,9 @@ export default function SunPowerGuide() {
                 This guide will help you figure out your options.
               </p>
               <a
-                href="/SunPower_Bankruptcy_Survival_Guide.pdf"
-                download
+                href="https://drive.google.com/uc?export=download&id=1xdg-DsVD5iKAKzqHfPC4srMif6Z3Gip8"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors shadow-lg"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
