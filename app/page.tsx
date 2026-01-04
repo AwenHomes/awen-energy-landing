@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import ProblemStatement from '@/components/ProblemStatement';
 import WhoThisIsFor from '@/components/WhoThisIsFor';
 import HowItWorks from '@/components/HowItWorks';
+import SunPowerGuideCTA from '@/components/SunPowerGuideCTA';
 import Footer from '@/components/Footer';
 
 // Lazy load below-fold components for better initial load performance
@@ -71,6 +72,7 @@ export default function Home() {
         <ProblemStatement />
         <WhoThisIsFor />
         <HowItWorks />
+        <SunPowerGuideCTA />
         <Pricing />
         <FAQ />
         <ContactForm />
